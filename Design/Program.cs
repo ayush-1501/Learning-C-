@@ -2,6 +2,7 @@
 using System;
 using Design.ExceptionHandling;
 using Design.MethodsAndProperties;
+using Design.CollectionAndGenerics;
 
 class Program
 {
@@ -84,13 +85,7 @@ class Program
        Encapsulation protects the internal state of an object by restricting access, promoting better data integrity.*/
         ClassProperty.ClassFunctions();
     }
-    static void DisplayItems(StringCollection collection)
-    {
-        for (int i = 0; i < collection.Count; i++)
-        {
-            Console.WriteLine(collection[i]);
-        }
-    }
+   
     static void MethodsAndProperties()
     {
         /* OverloadedMethods overloadedMethods = new OverloadedMethods();
@@ -137,6 +132,50 @@ class Program
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
+
+    static void CollectionAndGenerics()
+    {
+        var studentManagement = new StudentManagement();
+
+        // Adding students
+        studentManagement.AddStudent(new Student(1, "Alice"));
+        studentManagement.AddStudent(new Student(2, "Bob"));
+        studentManagement.AddStudent(new Student(3, "Charlie"));
+
+        // Displaying all students
+        studentManagement.DisplayStudents();
+
+        // Displaying a student by ID
+        studentManagement.DisplayStudentById(2);
+
+        // Displaying unique student IDs
+        studentManagement.DisplayUniqueIds();
+    }
+
+
+    public void LinqExample()
+    {
+        var studentManagement1 = new StudentManagement1();
+
+        // Adding students
+        studentManagement1.AddStudent(new StudentLINQ(1, "Alice", "Computer Science", 3.9));
+        studentManagement1.AddStudent(new StudentLINQ(2, "Bob", "Mathematics", 3.4));
+        studentManagement1.AddStudent(new StudentLINQ(3, "Charlie", "Computer Science", 3.7));
+        studentManagement1.AddStudent(new StudentLINQ(4, "David", "Mathematics", 2.9));
+        studentManagement1.AddStudent(new StudentLINQ(5, "Eva", "Physics", 3.8));
+
+        // Display all students
+        studentManagement1.DisplayStudents();
+
+        // Display students with GPA greater than 3.5
+        studentManagement1.DisplayStudentsWithHighGPA(3.5);
+
+        // Group students by major
+        studentManagement1.GroupStudentsByMajor();
+
+        // Order students by name
+        studentManagement1.OrderStudentsByName();
+    }
     static void Main()
     {
         //Basics();
@@ -147,7 +186,15 @@ class Program
         // Exception Handling
         // DemonstrateExceptionHandling();
 
-        MethodsAndProperties();
+        //MethodsAndProperties();
+
+        //CollectionAndGenerics
+        //CollectionAndGenerics();
+
+        //Program program = new Program();
+       // program.LinqExample();
+
+        //LamdaExp lambdaExample = new LamdaExp();
 
 
 
