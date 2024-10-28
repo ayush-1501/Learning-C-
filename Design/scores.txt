@@ -1,0 +1,6 @@
+Alice, 75
+Bob, 45
+Charlie, 85
+David, 55
+Eva, 95
+Frank, 50

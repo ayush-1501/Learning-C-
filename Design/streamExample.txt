@@ -1,0 +1,3 @@
+Line 1: Welcome to C# programming!
+Line 2: This is an example of working with streams.
+Line 3: Enjoy learning and coding!

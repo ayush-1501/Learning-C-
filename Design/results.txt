@@ -1,0 +1,9 @@
+Name, Score, Result
+Alice, 75, Pass
+Bob, 45, Fail
+Charlie, 85, Pass
+David, 55, Fail
+Eva, 95, Pass
+Frank, 50, Fail
+
+Average Score: 67.50

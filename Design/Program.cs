@@ -3,7 +3,8 @@ using System;
 using Design.ExceptionHandling;
 using Design.MethodsAndProperties;
 using Design.CollectionAndGenerics;
-
+using Design.FileHandling;
+using Design.Model;
 class Program
 {
     static void DemonstrateDataStructures()
@@ -192,11 +193,50 @@ class Program
         //CollectionAndGenerics();
 
         //Program program = new Program();
-       // program.LinqExample();
+        // program.LinqExample();
 
         //LamdaExp lambdaExample = new LamdaExp();
 
+        //File Input output example
+        /*string inputFilePath = "scores.txt"; // Input file path
+        string outputFilePath = "results.txt"; // Output file path
 
+        FileIO fileHandling = new FileIO();
+        fileHandling.ProcessScores(inputFilePath, outputFilePath);*/
+
+        //stream input output
+        /*string filePath = "streamExample.txt"; 
+
+        StreamHandling streamHandling = new StreamHandling();
+        streamHandling.ProcessStream(filePath);*/
+
+        string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Data"); // Create a 'Data' folder in the current directory
+        string fileName = "person.json"; // File name for serialized data
+        string filePath = Path.Combine(folderPath, fileName); // Combine folder path and file name
+       
+
+        // Create a Person instance
+        PersonModel personM = new PersonModel
+        {
+            Name = "John Doe",
+            Age = 30,
+            Address = new Address
+            {
+                Street = "123 Main St",
+                City = "Anytown",
+                State = "CA",
+                ZipCode = "12345"
+            }
+        };
+        personM.PhoneNumbers.Add("123-456-7890");
+        personM.PhoneNumbers.Add("987-654-3210");
+
+        // Serialize the Person object
+        SerializationHandler serializationHandler = new SerializationHandler();
+        serializationHandler.SerializePerson(filePath, personM);
+
+        // Deserialize the Person object
+        PersonModel deserializedPerson = serializationHandler.DeserializePerson(filePath);
 
     }
 }
