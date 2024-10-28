@@ -1,9 +1,6 @@
 ﻿using Design.DataStructures;
 using System;
-using System.Buffers.Text;
-using System.Diagnostics.Metrics;
-using System.Runtime.Intrinsics.X86;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Design.ExceptionHandling;
 
 class Program
 {
@@ -25,21 +22,32 @@ class Program
         /* Inheritance allows you to create new classes based on existing ones, facilitating code reuse.
        Polymorphism enables you to use methods in multiple forms, improving flexibility and maintainability.
        Encapsulation protects the internal state of an object by restricting access, promoting better data integrity.*/
-       // ClassProperty.ClassFunctions();
+        // ClassProperty.ClassFunctions();
 
-       // ArraysDS arrays = new ArraysDS();
-       // arrays.RunAllDemonstrations();
+        // ArraysDS arrays = new ArraysDS();
+        // arrays.RunAllDemonstrations();
 
-       // ListDS arraysDS = new ListDS();
-       // arraysDS.RunAllDemonstrations();
+        // ListDS arraysDS = new ListDS();
+        // arraysDS.RunAllDemonstrations();
 
-       // DictionariesDS dictionariesDS = new DictionariesDS();
-       // dictionariesDS.RunAllDemonstrations();
+        // DictionariesDS dictionariesDS = new DictionariesDS();
+        // dictionariesDS.RunAllDemonstrations();
 
         //StacksAndQueuesDS stacksAndQueuesDS = new StacksAndQueuesDS();
-       // stacksAndQueuesDS.RunAllDemonstrations();
+        // stacksAndQueuesDS.RunAllDemonstrations();
 
-        SetsDS setsDS = new SetsDS();
-        setsDS.RunAllDemonstrations();
+        //SetsDS setsDS = new SetsDS();
+        //setsDS.RunAllDemonstrations();
+
+        // TryCatch tryCatchInstance = new TryCatch();
+        //tryCatchInstance.RunAllDemonstrations();
+
+        //ThrowingExceptions throwingExceptions = new ThrowingExceptions();
+        //throwingExceptions.RunAllDemonstrations();
+
+       // CustomExceptionDemo demo = new CustomExceptionDemo();
+       // demo.RunDemo();
+
+
     }
 }
