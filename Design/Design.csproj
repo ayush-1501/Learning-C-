@@ -10,8 +10,4 @@
     <PackageReference Include="GitHub" Version="1.34.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MethodsAndProperties\" />
-  </ItemGroup>
-
 </Project>
