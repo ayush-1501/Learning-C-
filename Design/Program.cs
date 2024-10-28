@@ -214,7 +214,7 @@ class Program
         string fileName = "person.json"; // File name for serialized data
         string filePath = Path.Combine(folderPath, fileName); // Combine folder path and file name
        
-
+       /* //Json object creation
         // Create a Person instance
         PersonModel personM = new PersonModel
         {
@@ -236,7 +236,22 @@ class Program
         serializationHandler.SerializePerson(filePath, personM);
 
         // Deserialize the Person object
-        PersonModel deserializedPerson = serializationHandler.DeserializePerson(filePath);
+        PersonModel deserializedPerson = serializationHandler.DeserializePerson(filePath);*/
+
+        //SIMD
+        // Example usage with float arrays
+        float[] arrayA = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        float[] arrayB = { 9, 8, 7, 6, 5, 4, 3, 2 };
+        float[] resultFloat = SimdOperations.AddArraysSimd(arrayA, arrayB);
+
+        Console.WriteLine("Float Result: " + string.Join(", ", resultFloat));
+
+        // Example usage with double arrays
+        double[] arrayC = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        double[] arrayD = { 9, 8, 7, 6, 5, 4, 3, 2 };
+        double[] resultDouble = SimdOperations.AddArraysSimd(arrayC, arrayD);
+
+        Console.WriteLine("Double Result: " + string.Join(", ", resultDouble));
 
     }
 }
